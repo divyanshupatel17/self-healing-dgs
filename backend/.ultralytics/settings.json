@@ -1,0 +1,20 @@
+{
+  "settings_version": "0.0.6",
+  "datasets_dir": "D:\\VIT_class\\6_SEMESTER\\DEEP LEARNING\\PROJECT-DA3\\base\\datasets",
+  "weights_dir": "weights",
+  "runs_dir": "runs",
+  "uuid": "923cccff9e184a297b487b4a5fbf40f66531c8b1ca08d53a8bc1f25c7338cc67",
+  "sync": true,
+  "api_key": "",
+  "openai_api_key": "",
+  "clearml": true,
+  "comet": true,
+  "dvc": true,
+  "hub": true,
+  "mlflow": true,
+  "neptune": true,
+  "raytune": true,
+  "tensorboard": false,
+  "wandb": false,
+  "vscode_msg": true
+}

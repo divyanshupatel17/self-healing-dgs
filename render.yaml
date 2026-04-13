@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: digital-twin-backend
+    env: python
+    plan: free
+    rootDir: .
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m uvicorn backend.server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11

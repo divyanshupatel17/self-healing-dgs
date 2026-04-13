@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 10%;
+    --foreground: 210 20% 90%;
+
+    --card: 220 18% 14%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 220 18% 14%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 200 80% 55%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 160 70% 45%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 200 80% 55%;
+
+    --radius: 0.5rem;
+
+    --panel-header: 220 15% 16%;
+    --metric-value: 200 80% 55%;
+    --healing-active: 160 70% 45%;
+    --warning: 35 90% 55%;
+
+    --sidebar-background: 220 18% 12%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 200 80% 55%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 210 20% 85%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 200 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .panel-glass {
+    @apply bg-card border border-border rounded-lg overflow-hidden;
+  }
+  .panel-header {
+    background: hsl(var(--panel-header));
+    @apply px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground border-b border-border;
+  }
+  .metric-value {
+    color: hsl(var(--metric-value));
+    @apply text-3xl font-bold tracking-tight;
+  }
+  .metric-label {
+    @apply text-xs text-muted-foreground uppercase tracking-wider;
+  }
+  .sparkline-container {
+    @apply h-8 w-full;
+  }
+}
